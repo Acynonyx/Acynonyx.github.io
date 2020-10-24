@@ -11,7 +11,7 @@ Function that takes in text input, validates it, confirms your name and does shi
 
 let invalidChar = /^[a-zA-Z ]*$/;
   let bool = true;
-  let firstName, lastName, input;
+  let firstN, lastN, input;
   
   function badName (input)
   {
@@ -23,8 +23,8 @@ let invalidChar = /^[a-zA-Z ]*$/;
   	let nameArray = input.split(" ");
     if (nameArray.length > 1)
     {
-    	let firstName = nameArray[0];
-      let lastName = nameArray[nameArray.length-1];
+    	firstN = nameArray[0];
+      lastN = nameArray[nameArray.length-1];
     }
     else {firstName = nameArray[0]; lastName = "";}
    
@@ -32,7 +32,7 @@ let invalidChar = /^[a-zA-Z ]*$/;
   
   function userName (firstN, lastN)
   {
-  	 this.firstName = firstN;
+  	this.firstName = firstN;
     this.lastName = lastN;
   }
   
@@ -48,9 +48,13 @@ let invalidChar = /^[a-zA-Z ]*$/;
   }
   
   nameSplitter(input);
-  var currentUser = new userName (firstName, lastName);
-  alert(currentUser.firstName, currentUser.lastName);
+  var currentUser = new userName (firstN, lastN);
+  alert("Your set name: " + currentUser.firstName + " " + currentUser.lastName); 
 
 </script>
+
+<video playsinline autoplay loop class src="https://i.imgur.com/2cYaZBm.mp4"></video>
+
+
 </body>
 </html>
