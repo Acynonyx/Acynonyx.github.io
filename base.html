@@ -1,0 +1,37 @@
+<html>
+<head>
+ <title> First JS Project </title>
+</head>
+<body>
+<h1>
+Function that takes in text input, validates it, confirms your name and does shit with it.
+</h1>
+<script>
+	
+  var invalidChar = /^[a-zA-Z ]*$/;
+  var bool = true;
+  
+  while (bool == true)
+  {
+  	var input = prompt("Enter your name: ");
+    
+  	if (badName(input))
+     bool = false;
+    else alert("Invalid name, please re enter using only english alphabets.");
+    
+  }
+  
+  function badName (input)
+  {
+   return(invalidChar.test(input))
+  }
+  
+ 	function nameSplitter (input)
+  {
+  	
+   
+  }
+
+</script>
+</body>
+</html>
