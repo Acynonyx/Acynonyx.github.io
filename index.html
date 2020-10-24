@@ -1,25 +1,17 @@
 <html>
 <head>
  <title> First JS Project </title>
+ <script> </script>
 </head>
 <body>
 <h1>
 Function that takes in text input, validates it, confirms your name and does shit with it.
 </h1>
 <script>
-	
-  var invalidChar = /^[a-zA-Z ]*$/;
-  var bool = true;
-  
-  while (bool == true)
-  {
-  	var input = prompt("Enter your name: ");
-    
-  	if (badName(input))
-     bool = false;
-    else alert("Invalid name, please re enter using only english alphabets.");
-    
-  }
+
+let invalidChar = /^[a-zA-Z ]*$/;
+  let bool = true;
+  let firstName, lastName, input;
   
   function badName (input)
   {
@@ -28,9 +20,36 @@ Function that takes in text input, validates it, confirms your name and does shi
   
  	function nameSplitter (input)
   {
-  	
+  	let nameArray = input.split(" ");
+    if (nameArray.length > 1)
+    {
+    	let firstName = nameArray[0];
+      let lastName = nameArray[nameArray.length-1];
+    }
+    else {firstName = nameArray[0]; lastName = "";}
    
   }
+  
+  function userName (firstName, lastName)
+  {
+  	this.firstName = firstName;
+    this.lastName = lastName;
+  }
+  
+  
+  while (bool == true)
+  {
+  	input = prompt("Enter your name: ");
+    
+  	if (badName(input))
+     bool = false;
+    else alert("Invalid name, please re enter using only english alphabets.");
+    
+  }
+  
+  nameSplitter(input);
+  var currentUser = new userName (firstName, lastName);
+  alert(currentUser.firstName, currentUser.lastName);
 
 </script>
 </body>
